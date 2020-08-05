@@ -18,7 +18,6 @@ C:\Users\snake\Documents\F#Scripts\calcGPA\calcGPA\bin\Debug\net48\ru\FSharp.Cor
 C:\Users\snake\Documents\F#Scripts\calcGPA\calcGPA\bin\Debug\net48\tr\FSharp.Core.resources.dll
 C:\Users\snake\Documents\F#Scripts\calcGPA\calcGPA\bin\Debug\net48\zh-Hans\FSharp.Core.resources.dll
 C:\Users\snake\Documents\F#Scripts\calcGPA\calcGPA\bin\Debug\net48\zh-Hant\FSharp.Core.resources.dll
-C:\Users\snake\Documents\F#Scripts\calcGPA\calcGPA\obj\Debug\net48\calcGPA.fsprojAssemblyReference.cache
 C:\Users\snake\Documents\F#Scripts\calcGPA\calcGPA\obj\Debug\net48\calcGPA.AssemblyInfoInputs.cache
 C:\Users\snake\Documents\F#Scripts\calcGPA\calcGPA\obj\Debug\net48\calcGPA.AssemblyInfo.fs
 C:\Users\snake\Documents\F#Scripts\calcGPA\calcGPA\obj\Debug\net48\calcGPA.fsproj.CopyComplete
