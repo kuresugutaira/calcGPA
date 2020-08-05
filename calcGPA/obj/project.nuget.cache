@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "YmjoajT5JnPLpzB8usHNOssj1SF3jm9mgQy2PrFAgviJdS6cFbp5lY1fbD6UbhIap759nTh6xoR9VXqo+A3dEg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\snake\\Documents\\F#Scripts\\calcGPA\\calcGPA\\calcGPA.fsproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\snake\\.nuget\\packages\\canopy\\2.1.5\\canopy.2.1.5.nupkg.sha512",
+    "C:\\Users\\snake\\.nuget\\packages\\fsharp.core\\4.7.2\\fsharp.core.4.7.2.nupkg.sha512",
+    "C:\\Users\\snake\\.nuget\\packages\\selenium.webdriver\\3.141.0\\selenium.webdriver.3.141.0.nupkg.sha512",
+    "C:\\Users\\snake\\.nuget\\packages\\selenium.webdriver.chromedriver\\84.0.4147.3001\\selenium.webdriver.chromedriver.84.0.4147.3001.nupkg.sha512",
+    "C:\\Users\\snake\\.nuget\\packages\\system.drawing.common\\4.6.0\\system.drawing.common.4.6.0.nupkg.sha512"
+  ],
+  "logs": []
+}
