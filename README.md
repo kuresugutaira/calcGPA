@@ -9,8 +9,10 @@ This program calculate your GPA via your twins.
 
 2. calcGPA.exeを起動します。
 3. この画面が表示されたらあなたのTwinsのユーザ名を入力します。
+
     ![calcGPA-image1](https://github.com/kuresugutaira/calcGPA/blob/master/images/calcGPA-image1.png)
 4. この画面が表示されたらあなたのTwinsのパスワードを入力します。
+
     ![calcGPA-image2](https://github.com/kuresugutaira/calcGPA/blob/master/images/calcGPA-image2.png)
 5. Google Chromeが勝手に起動し、twinsにログインして成績データを自動で取得しGPAを返してくれます。
 6. GPAが表示されたら自分のGPAを確認します。
