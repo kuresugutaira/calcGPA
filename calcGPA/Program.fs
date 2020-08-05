@@ -42,28 +42,39 @@ printfn "それでも直らなかったらTwitter : @tsuGoojiまで連絡して�
     let nS = Array.sub tmp 0 ((Array.length tmp) - 2)
     let n = String(nS) |> int //要素数を取得
 
-    let rec makeDataLists (x,y) = //xは番号,yはリスト,(単位数,評価)のタプルのリストを作ってくれる
+    //xは番号,yはリスト,(単位数,評価,GPA計算対象)のタプルのリストを作ってくれる
+    //例 : (2.0,A,true) <- 2単位で評価がA、GPA計算対象内である科目のデータ
+    let rec makeDataLists (x,y) = 
         if x > n then y 
         else
         let xPulsOne = string (x + 1)
         let item = read ("#rishuSeisekiReferListForm > table.normal > tbody > tr:nth-child(" + xPulsOne + ")")
-        let alldataList = item.Split(' ')
-        let dataList = (string (alldataList.[(Array.length alldataList) - 4]),string (alldataList.[(Array.length alldataList) - 1]))
+        let itemList = item.Split(' ')
+        let isGPAtaisyou str = 
+            match str with 
+                | "GPA計算対象外科目" -> false
+                | _ -> true
+        let taisyou = isGPAtaisyou itemList.[4]
+        let dataList = (string (itemList.[(Array.length itemList) - 4]),string (itemList.[(Array.length itemList) - 1]),taisyou)
         makeDataLists (x + 1,dataList::y)
 
-    let trim (x,y) = 
-        match y with
-           | "A+" -> (float x,(float x) * 4.3)
-           | "A" -> (float x,(float x) * 4.0)
-           | "B" -> (float x,(float x) * 3.0) 
-           | "C" -> (float x,(float x) * 2.0)
-           | _ -> (0.,0.)
+    //ABCD評価をスコアに変換したりGPA計算対象外を除外したりする
+    let trim (x,y,z) = 
+        match (y,z) with
+           | ("A+",true) -> (float x,(float x) * 4.3)
+           | ("A",true) -> (float x,(float x) * 4.0)
+           | ("B",true) -> (float x,(float x) * 3.0) 
+           | ("C",true) -> (float x,(float x) * 2.0)
+           | ("D",true) -> (float x,0.0)
+           | _ -> (0.0,0.0)
 
-    let calcGPA (x,y) = //リストからGPAを計算してくれる
+    //データリストからGPAを計算してくれる関数
+    let calcGPA (x,y) = 
         (List.sumBy float x,List.sum y)
         |> (fun (u,v) -> v / u)
         |> string
 
+    //GPAを計算する
     let gpa = makeDataLists (1,[]) |> List.map trim |> List.unzip |> calcGPA
 
     Console.WriteLine ("あなたのGPAは\n" + gpa + "\nだよ。")
